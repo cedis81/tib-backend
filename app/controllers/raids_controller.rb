@@ -46,6 +46,6 @@ class RaidsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def raid_params
-      params.require(:raid).permit(:boss_name, :time_remaining)
+      params.require(:raid).permit(:boss_name, :time_remaining, :user_id)
     end
 end

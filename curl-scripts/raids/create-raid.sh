@@ -8,7 +8,8 @@ curl "http://localhost:4741/raids" \
   --data '{
     "raid": {
       "boss_name": "'"${BOSS}"'",
-      "time_remaining": "'"${TIME}"'"
+      "time_remaining": "'"${TIME}"'",
+      "user_id": "'"${USER}"'"
     }
   }'
 
