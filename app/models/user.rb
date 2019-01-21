@@ -3,5 +3,5 @@
 class User < ApplicationRecord
   include Authentication
   has_many :examples
-  has_many :raids
+  has_and_belongs_to_many :raids
 end
