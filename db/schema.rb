@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_20_195018) do
+ActiveRecord::Schema.define(version: 2019_01_23_155429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,12 +28,8 @@ ActiveRecord::Schema.define(version: 2019_01_20_195018) do
     t.integer "time_remaining", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "raids_users", id: false, force: :cascade do |t|
-    t.bigint "raid_id", null: false
-    t.bigint "user_id", null: false
-    t.index ["raid_id", "user_id"], name: "index_raids_users_on_raid_id_and_user_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_raids_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,4 +43,5 @@ ActiveRecord::Schema.define(version: 2019_01_20_195018) do
   end
 
   add_foreign_key "examples", "users"
+  add_foreign_key "raids", "users"
 end
