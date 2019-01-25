@@ -80,7 +80,7 @@ Below is the version 1 ERD created for MVP for this app.
 [Client GitHub repo](https://github.com/cedis81/tib-raidlb-client)
 
 ### Unsolved issues:
-BBelow are unsolved issues that I would like to address in future iterations:
+Below are unsolved issues that I would like to address in future iterations:
 * Allow users to view all raids submitted by them in one list.
 * Allow users to view all raids submitted for one particular raid boss.
 * Allow users to upload photos and display those photos when their raids are selected.
