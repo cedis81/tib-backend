@@ -5,7 +5,14 @@ class RaidsController < OpenReadController
 
   # GET /raids
   def index
-    @raids = Raid.all
+    @raids = Raid.all.order(time_remaining: :desc)
+
+    render json: @raids
+  end
+
+  # GET /myraids
+  def myraids
+    @raids = Raid.where(user_id: current_user).order(time_remaining: :desc)
 
     render json: @raids
   end
